@@ -45,13 +45,22 @@ docker compose up -d
 
 ## ⚙️ Configuración de variables de entorno
 
-Crear un archivo `.env` en la raíz del proyecto:
+En Windows (PowerShell):
 
 ```env
-DB_URL=jdbc:postgresql://localhost:5432/pruebatecnica
-DB_USERNAME=postgres
-DB_PASSWORD=postgres
-DB_DRIVER=org.postgresql.Driver
+$env:DB_URI="jdbc:postgresql://localhost:5432/escuela_db"
+$env:DB_USER="admin"
+$env:DB_PASSWORD="admin123"
+$env:DB_DRIVER="org.postgresql.Driver"
+```
+
+En Linux / macOS:
+
+```env
+export DB_URI=jdbc:postgresql://localhost:5432/escuela_db
+export DB_USER=admin
+export DB_PASSWORD=admin123
+export DB_DRIVER=org.postgresql.Driver
 ```
 
 ---
